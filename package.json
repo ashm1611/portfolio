@@ -5,7 +5,8 @@
   "scripts": {
     "start": " SET NODE_ENV=production && webpack -p",
     "clean": "rimraf dist",
-    "build": "webpack-dev-server"
+    "build": "webpack-dev-server",
+    "deploy": "yarn build && git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "@babel/preset-react": "^7.13.13",
